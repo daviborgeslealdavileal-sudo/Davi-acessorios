@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Davi Acessórios — estilo, qualidade e personalidade. Confira nosso catálogo e peça pelo WhatsApp.">
+  <title>Davi Acessórios | Catálogo Oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090909;--panel:#141414;--gold:#d5ad62;--gold2:#f1d79e;--muted:#a9a9a9;--white:#f8f6f1}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif}
+    a{color:inherit;text-decoration:none}
+    .topline{height:4px;background:linear-gradient(90deg,#8d672d,var(--gold2),#8d672d)}
+    header{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.94);backdrop-filter:blur(14px);border-bottom:1px solid #29231a}
+    .nav{max-width:1120px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:2px;font-size:13px}
+    .brand img{width:49px;height:49px;object-fit:contain;border-radius:50%;background:white}
+    .brand span{display:block;color:var(--gold);font-size:9px;letter-spacing:4px;margin-top:3px}
+    .navlinks{display:flex;gap:22px;color:#ddd;font-size:13px}.navlinks a:hover{color:var(--gold)}
+    .hero{max-width:1120px;margin:auto;padding:66px 20px 54px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:42px}
+    .eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:11px;font-weight:800}
+    h1{font:800 clamp(42px,6vw,72px)/1.02 'Playfair Display',serif;margin:17px 0}
+    h1 em{color:var(--gold);font-style:normal}
+    .hero p{color:#c5c5c5;line-height:1.75;max-width:470px;font-size:15px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:6px;font-weight:800;font-size:12px;letter-spacing:1px;transition:.2s}
+    .btn-gold{background:linear-gradient(135deg,var(--gold2),#b8893f);color:#111}.btn-gold:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .btn-outline{border:1px solid #66502d;color:var(--gold2)}
+    .hero-art{position:relative;display:flex;justify-content:center;align-items:center;min-height:300px}
+    .hero-art:before{content:"";position:absolute;width:75%;aspect-ratio:1;border:1px solid #6d532e;border-radius:50%;box-shadow:0 0 70px #b78b3b20}
+    .hero-art img{position:relative;width:min(100%,390px);max-height:330px;object-fit:contain;filter:drop-shadow(0 12px 24px #000)}
+    .benefits{border-top:1px solid #28231b;border-bottom:1px solid #28231b;background:#101010}
+    .benefit-inner{max-width:1120px;margin:auto;padding:17px 20px;display:flex;justify-content:space-around;gap:15px;flex-wrap:wrap;color:#d5c6a8;font-size:11px;letter-spacing:1.4px;text-transform:uppercase}
+    section{max-width:1120px;margin:auto;padding:58px 20px}
+    .section-head{text-align:center;margin-bottom:28px}.section-head h2{font:700 clamp(29px,4vw,42px) 'Playfair Display',serif;margin:10px 0}.section-head p{color:var(--muted);font-size:13px}
+    .toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin:24px 0}
+    .filters{display:flex;gap:8px;flex-wrap:wrap}
+    .filter{border:1px solid #393126;background:transparent;color:#ddd;padding:9px 13px;border-radius:30px;font-size:11px;cursor:pointer}
+    .filter.active,.filter:hover{background:var(--gold);border-color:var(--gold);color:#111;font-weight:800}
+    .search{background:#151515;border:1px solid #38322a;color:white;border-radius:30px;padding:10px 15px;min-width:210px;outline:none}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--panel);border:1px solid #28231c;border-radius:10px;overflow:hidden;transition:.25s}
+    .card:hover{transform:translateY(-5px);border-color:#806337;box-shadow:0 15px 35px #0008}
+    .photo{height:280px;background:#eee;position:relative;overflow:hidden}
+    .photo img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+    .card:hover .photo img{transform:scale(1.045)}
+    .tag{position:absolute;top:12px;left:12px;background:#0b0b0be8;color:var(--gold2);padding:7px 10px;font-size:9px;letter-spacing:1px;border:1px solid #806337;border-radius:3px}
+    .info{padding:17px}.category{color:var(--gold);font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:800}
+    .info h3{font:700 19px 'Playfair Display',serif;margin:8px 0}
+    .info p{color:#aaa;font-size:12px;line-height:1.55;min-height:36px;margin:0 0 14px}
+    .price-row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .price{font-size:12px;color:var(--gold2);font-weight:800}
+    .buy{background:var(--gold);color:#111;border:0;border-radius:5px;padding:11px 13px;font-size:10px;font-weight:800;cursor:pointer}
+    .buy:hover{background:var(--gold2)}
+    .about{background:linear-gradient(135deg,#17130d,#0d0d0d);border:1px solid #4d3b22;border-radius:12px;padding:32px;text-align:center}
+    .about h2{font:700 30px 'Playfair Display',serif;margin:8px 0 12px}.about p{color:#c1b9aa;line-height:1.7;max-width:650px;margin:0 auto 20px;font-size:13px}
+    footer{border-top:1px solid #29231a;padding:30px 20px;text-align:center;color:#aaa;font-size:12px}
+    footer strong{color:var(--gold2);letter-spacing:2px}
+    .float{position:fixed;right:18px;bottom:18px;z-index:9;background:#20c766;color:#071b0e;border-radius:50px;padding:14px 17px;font-size:12px;font-weight:800;box-shadow:0 8px 24px #0008}
+    .empty{display:none;color:#aaa;text-align:center;padding:35px;grid-column:1/-1}
+    @media(max-width:760px){.navlinks{display:none}.hero{grid-template-columns:1fr;text-align:center;padding-top:44px;gap:15px}.hero p{margin:auto}.actions{justify-content:center}.hero-art{min-height:220px}.hero-art img{max-height:240px;width:75%}.grid{grid-template-columns:repeat(2,1fr);gap:11px}.photo{height:220px}.info{padding:13px}.info h3{font-size:16px}.price-row{align-items:flex-start;flex-direction:column}.buy{width:100%}section{padding:44px 14px}.search{width:100%}.toolbar{align-items:stretch}}
+    @media(max-width:420px){.grid{grid-template-columns:1fr 1fr}.photo{height:185px}.brand{font-size:11px}.brand img{width:42px;height:42px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header><nav class="nav">
+    <a class="brand" href="#"><img src="assets/logo.webp" alt="Logo Davi Acessórios"><div> DAVI ACESSÓRIOS <span>QUALIDADE • ESTILO</span></div></a>
+    <div class="navlinks"><a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div>
+    <a class="btn btn-outline" href="#produtos">VER CATÁLOGO</a>
+  </nav></header>
+
+  <main>
+    <div class="hero" id="inicio">
+      <div>
+        <div class="eyebrow">Sua presença, seu estilo</div>
+        <h1>Detalhes que<br>fazem <em>história.</em></h1>
+        <p>Acessórios para expressar sua personalidade em cada detalhe. Escolha o seu favorito e faça seu pedido diretamente pelo WhatsApp.</p>
+        <div class="actions"><a class="btn btn-gold" href="#produtos">EXPLORAR PRODUTOS</a><a class="btn btn-outline" href="https://wa.me/5589994397288" target="_blank" rel="noopener">FALAR COM A LOJA</a></div>
+      </div>
+      <div class="hero-art"><img src="assets/logo.webp" alt="Davi Acessórios — qualidade"></div>
+    </div>
+    <div class="benefits"><div class="benefit-inner"><span>✦ Estilo em cada detalhe</span><span>✦ Atendimento pelo WhatsApp</span><span>✦ Itainópolis – Piauí</span></div></div>
+
+    <section id="produtos">
+      <div class="section-head"><div class="eyebrow">Escolha o seu favorito</div><h2>Nosso catálogo</h2><p>Confira os modelos disponíveis e consulte o valor pelo WhatsApp.</p></div>
+      <div class="toolbar">
+        <div class="filters">
+          <button class="filter active" data-filter="todos">Todos</button>
+          <button class="filter" data-filter="colares">Colares</button>
+          <button class="filter" data-filter="conjuntos">Conjuntos</button>
+          <button class="filter" data-filter="pulseiras">Pulseiras</button>
+        </div>
+        <input class="search" id="search" type="search" placeholder="Buscar produto...">
+      </div>
+      <div class="grid" id="productGrid">
+        <article class="card" data-category="conjuntos" data-name="conjunto trevo dourado colar brincos">
+          <div class="photo"><img src="assets/conjunto-trevo-dourado.jpg" alt="Conjunto dourado com pingente de trevo e brincos"><span class="tag">DESTAQUE</span></div>
+          <div class="info"><div class="category">Conjunto • Dourado</div><h3>Conjunto Trevo</h3><p>Colar com pingente de trevo e brincos combinando.</p><div class="price-row"><span class="price">Consulte o valor</span><button class="buy" onclick="order('Conjunto Trevo dourado')">PEDIR PELO WHATSAPP</button></div></div>
+        </article>
+        <article class="card" data-category="conjuntos" data-name="conjunto medalhao redondo dourado colar brincos">
+          <div class="photo"><img src="assets/conjunto-medalhao-dourado.jpg" alt="Conjunto dourado com medalhão redondo e brincos"></div>
+          <div class="info"><div class="category">Conjunto • Dourado</div><h3>Conjunto Medalhão</h3><p>Colar com pingente redondo vazado e brincos.</p><div class="price-row"><span class="price">Consulte o valor</span><button class="buy" onclick="order('Conjunto Medalhão dourado')">PEDIR PELO WHATSAPP</button></div></div>
+        </article>
+        <article class="card" data-category="pulseiras" data-name="pulseira berloques prata charms">
+          <div class="photo"><img src="assets/pulseira-berloques-prata-1.jpg" alt="Pulseira prateada com berloques variados"><span class="tag">MODELO 01</span></div>
+          <div class="info"><div class="category">Pulseira • Prata</div><h3>Pulseira de Berloques</h3><p>Pulseira com pingentes e detalhes variados.</p><div class="price-row"><span class="price">Consulte o valor</span><button class="buy" onclick="order('Pulseira de Berloques — modelo 01')">PEDIR PELO WHATSAPP</button></div></div>
+        </article>
+        <article class="card" data-category="pulseiras" data-name="pulseira berloques prata charms">
+          <div class="photo"><img src="assets/pulseira-berloques-prata-2.jpg" alt="Outra versão de pulseira prateada com berloques"><span class="tag">MODELO 02</span></div>
+          <div class="info"><div class="category">Pulseira • Prata</div><h3>Pulseira de Berloques</h3><p>Outra combinação de pingentes para personalizar seu visual.</p><div class="price-row"><span class="price">Consulte o valor</span><button class="buy" onclick="order('Pulseira de Berloques — modelo 02')">PEDIR PELO WHATSAPP</button></div></div>
+        </article>
+        <article class="card" data-category="colares" data-name="corrente dourada masculina colar">
+          <div class="photo"><img src="assets/corrente-dourada.jpg" alt="Corrente dourada"></div>
+          <div class="info"><div class="category">Colar • Dourado</div><h3>Corrente Dourada</h3><p>Corrente dourada de visual clássico e versátil.</p><div class="price-row"><span class="price">Consulte o valor</span><button class="buy" onclick="order('Corrente dourada')">PEDIR PELO WHATSAPP</button></div></div>
+        </article>
+        <article class="card" data-category="colares" data-name="colar duplo prata pingentes">
+          <div class="photo"><img src="assets/colar-duplo-prata.jpg" alt="Colar prateado com dois pingentes"></div>
+          <div class="info"><div class="category">Colar • Prateado</div><h3>Colar Duplo</h3><p>Modelo com duas correntes e pingentes em destaque.</p><div class="price-row"><span class="price">Consulte o valor</span><button class="buy" onclick="order('Colar duplo prateado')">PEDIR PELO WHATSAPP</button></div></div>
+        </article>
+        <article class="card" data-category="colares" data-name="colar medalha prata aço inoxidável">
+          <div class="photo"><img src="assets/colar-medalha-prata.jpg" alt="Colar prateado com medalha redonda"></div>
+          <div class="info"><div class="category">Colar • Prateado</div><h3>Colar Medalha</h3><p>Corrente prateada com pingente redondo detalhado.</p><div class="price-row"><span class="price">Consulte o valor</span><button class="buy" onclick="order('Colar Medalha prateado')">PEDIR PELO WHATSAPP</button></div></div>
+        </article>
+        <article class="card" data-category="pulseiras" data-name="pulseira couro trançada preta masculina">
+          <div class="photo"><img src="assets/pulseira-couro-preta.jpg" alt="Pulseira preta de couro trançado no pulso"></div>
+          <div class="info"><div class="category">Pulseira • Preta</div><h3>Pulseira Trançada</h3><p>Visual discreto e moderno para o dia a dia.</p><div class="price-row"><span class="price">Consulte o valor</span><button class="buy" onclick="order('Pulseira preta trançada')">PEDIR PELO WHATSAPP</button></div></div>
+        </article>
+        <article class="card" data-category="pulseiras" data-name="pulseira contas pretas masculina">
+          <div class="photo"><img src="assets/pulseira-contas-pretas.jpg" alt="Pulseira de contas pretas"></div>
+          <div class="info"><div class="category">Pulseira • Preta</div><h3>Pulseira de Contas</h3><p>Pulseira de contas pretas com acabamento moderno.</p><div class="price-row"><span class="price">Consulte o valor</span><button class="buy" onclick="order('Pulseira de contas pretas')">PEDIR PELO WHATSAPP</button></div></div>
+        </article>
+        <div class="empty" id="empty">Nenhum produto encontrado. Tente outra busca.</div>
+      </div>
+    </section>
+
+    <section id="sobre"><div class="about">
+      <div class="eyebrow">Davi Acessórios</div><h2>Seu estilo merece destaque.</h2>
+      <p>Uma seleção de acessórios para completar seu visual com personalidade. Estamos em Itainópolis, Piauí, e atendemos você diretamente pelo WhatsApp.</p>
+      <a class="btn btn-gold" href="https://wa.me/5589994397288" target="_blank" rel="noopener">FALE COM A GENTE</a>
+    </div></section>
+  </main>
+  <footer id="contato"><strong>DAVI ACESSÓRIOS</strong><p>Itainópolis – Piauí</p><p>WhatsApp: (89) 99439-7288</p><p>© <span id="year"></span> Davi Acessórios. Todos os direitos reservados.</p></footer>
+  <a class="float" href="https://wa.me/5589994397288?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Davi%20Acess%C3%B3rios." target="_blank" rel="noopener">WHATSAPP ↗</a>
+  <script>
+    const phone = "5589994397288";
+    function order(product){
+      const msg = `Olá! Vi o catálogo da Davi Acessórios e tenho interesse em: ${product}. Pode me informar o preço e a disponibilidade?`;
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,"_blank");
+    }
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const filters = document.querySelectorAll(".filter");
+    const cards = [...document.querySelectorAll(".card")];
+    const search = document.getElementById("search");
+    let active = "todos";
+    function update(){
+      const term = search.value.toLowerCase().trim();
+      let visible = 0;
+      cards.forEach(card=>{
+        const okCategory = active === "todos" || card.dataset.category === active;
+        const okSearch = card.dataset.name.includes(term) || card.innerText.toLowerCase().includes(term);
+        card.style.display = okCategory && okSearch ? "" : "none";
+        if(okCategory && okSearch) visible++;
+      });
+      document.getElementById("empty").style.display = visible ? "none" : "block";
+    }
+    filters.forEach(btn=>btn.addEventListener("click",()=>{
+      filters.forEach(b=>b.classList.remove("active"));
+      btn.classList.add("active"); active=btn.dataset.filter; update();
+    }));
+    search.addEventListener("input",update);
+  </script>
+</body>
+</html>
